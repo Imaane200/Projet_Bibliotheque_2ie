@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Projet de Gestion de Bibliothèque Universitaire
 
-## Getting Started
+Ce projet est une application web moderne développée avec **Next.js** pour la gestion d’une bibliothèque universitaire.  
+Il propose une interface pour les **étudiants** et une interface d’administration pour les **administrateurs**.
 
-First, run the development server:
+---
+
+## ✨ Fonctionnalités
+
+### 👩‍🎓 Étudiants
+- S’inscrire et se connecter
+- Parcourir la liste des livres
+- Emprunter des livres
+- Laisser des avis
+
+### 👩‍💼 Administrateurs
+- Gérer les étudiants
+- Ajouter, modifier ou supprimer des livres
+- Gérer les emprunts
+
+---
+
+## 🔑 Accès Admin (pour tests)
+
+Pour vous connecter en tant qu’**administrateur**, utilisez :
+
+- **Email** : `sawadogoimaane@gmail.com`  
+- **Mot de passe** : `123456`
+
+> Ces identifiants sont valables uniquement en local, avec la base de données correctement initialisée.
+
+---
+
+## 🚀 Lancer le projet localement
+
+### Prérequis
+
+- Node.js ≥ 18.x
+- MySQL installé localement
+- Créer un fichier `.env` à partir du modèle `.env.example` avec les bonnes valeurs
+
+### Installation
 
 ```bash
+# Cloner le projet
+git clone https://github.com/Imaane200/Projet_Bibliotheque_2ie.git
+
+# Se déplacer dans le dossier
+cd Projet_Bibliotheque_2ie
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur en développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Technologies utilisées
 
-## Learn More
+- **Next.js** (App Router, TypeScript)
+- **Tailwind CSS** + **shadcn/ui**
+- **Express.js** côté backend
+- **MySQL** (via `mysql2`)
+- **JWT** pour l’authentification
+- **bcryptjs** pour le hachage des mots de passe
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Licence
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ce projet est distribué sous licence MIT.  
+Vous êtes libre de le modifier et de le réutiliser dans un cadre personnel ou académique.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👤 Auteure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**SAWADOGO Imaane**  
+Étudiante en Informatique Intelligence Artificielle et Application à 2iE  
+Email : sawadogoimaane@gmail.com
