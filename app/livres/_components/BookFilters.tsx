@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from 'use-debounce';
 
-// Supposons que ces genres viennent de l'API dans un vrai projet
+
 const genres = ["Roman", "Science-Fiction", "Histoire", "Biographie", "Technique"];
 
 export function BookFilters() {

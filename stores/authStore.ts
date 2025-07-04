@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-// A FAIRE : Définir un type plus précis pour l'utilisateur
+// Définition des types pour l'utilisateur et l'état d'authentification
 type User = {
     id: number;
     nom: string;

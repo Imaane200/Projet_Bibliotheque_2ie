@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner"; // <-- MISE À JOUR ICI
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
           <main className="flex-1 container py-8">{children}</main>
           <Footer />
         </div>
-        <Toaster />
+        <Toaster richColors /> 
       </body>
     </html>
   );

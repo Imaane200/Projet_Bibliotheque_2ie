@@ -1,3 +1,5 @@
+// --- components/layout/Header.tsx ---
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -12,9 +14,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useRouter } from "next/navigation"; // <-- Importer le useRouter
 
 export default function Header() {
   const { user, token, logout } = useAuthStore();
+  const router = useRouter(); // <-- Initialiser le router
+
+  // --- FONCTION POUR LA DÉCONNEXION ---
+  const handleLogout = () => {
+    // 1. On efface les données de l'utilisateur
+    logout();
+    // 2. On redirige immédiatement vers la page d'accueil
+    router.push('/');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -45,7 +57,8 @@ export default function Header() {
                   <DropdownMenuItem asChild><Link href="/admin">Administration</Link></DropdownMenuItem>
                 )}
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={logout} className="text-red-500">
+                {/* On appelle notre  fonction au clic */}
+                <DropdownMenuItem onClick={handleLogout} className="text-red-500 focus:text-red-500 cursor-pointer">
                   Déconnexion
                 </DropdownMenuItem>
               </DropdownMenuContent>
